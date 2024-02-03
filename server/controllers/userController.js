@@ -40,7 +40,7 @@ const loginController = async (req, res) => {
 
 		res.cookie('token', token, {
 			httpOnly: true,
-			sameSite: false,
+			sameSite: 'None',
 		});
 		res.status(200).json({ message: 'User logged in successfully' });
 	} catch (error) {
