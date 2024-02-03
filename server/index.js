@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
 	cors({
-		origin: ['http://localhost:5173'],
+		origin: ['https://kodeditor-e97f24pao-absorbinginfos-projects.vercel.app'],
 		credentials: true,
 	}),
 );
