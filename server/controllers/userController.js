@@ -38,7 +38,7 @@ const loginController = async (req, res) => {
 			expiresIn: '6h',
 		});
 
-		res.cookie('token', token, { httpOnly: true });
+		res.cookie('token', token, { httpOnly: true, path: '/', sameSite: false });
 		res.status(200).json({ message: 'User logged in successfully' });
 	} catch (error) {
 		console.log(error);
