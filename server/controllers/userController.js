@@ -38,7 +38,12 @@ const loginController = async (req, res) => {
 			expiresIn: '6h',
 		});
 
-		res.cookie('token', token, { httpOnly: true, path: '/', sameSite: false });
+		res.cookie('token', token, {
+			domain: 'https://kodeditor-sigma.vercel.app',
+			httpOnly: true,
+			path: '/',
+			sameSite: false,
+		});
 		res.status(200).json({ message: 'User logged in successfully' });
 	} catch (error) {
 		console.log(error);
