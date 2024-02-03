@@ -41,6 +41,7 @@ const loginController = async (req, res) => {
 		res.cookie('token', token, {
 			httpOnly: true,
 			sameSite: 'None',
+			secure: true,
 		});
 		res.status(200).json({ message: 'User logged in successfully' });
 	} catch (error) {
