@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "node index",
 		"dev": "nodemon index",
+		"postinstall": "prisma generate",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
